@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-def greetings(name):
-    if name==None:print("Hello noble stranger.")
-    if type(name) == str:
-     print("Hello, "+name)
+def greetings(name=None):
+    if isinstance(name,str):
+       print("Hello, "+name+".")
+    elif name==None:
+       print("Hello noble stranger.")
     else:
      print("Error! It was not a name.")
 
@@ -11,6 +12,3 @@ greetings('Alexandra')
 greetings('Wil')
 greetings()
 greetings(42)
-
-
-#AAAAHH
